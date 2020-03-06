@@ -18,7 +18,7 @@ export class MoviesService {
 
 getTvShows(genre:string, name:string):Observable<ITvShows>{
     return this.httpClient.get<ITvshosData>( `${environment.baseUrl}
-    api.tvmaze.com/singlesearch/shows?q=${genre},${name}&appid=${environment.appId}`
+    api.tvmaze.com/shows?q=${genre},${name}&appid=${environment.appId}`
    ).pipe(map(data => this.transformToITvShows(data)))
    ;
   }
