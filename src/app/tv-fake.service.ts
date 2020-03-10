@@ -6,6 +6,12 @@ import { Observable, of } from 'rxjs';
   providedIn: 'root'
 })
 export class TvFakeService implements IMoviesService {
+  Genre: string;
+  name: string;
+  Schedule: number;
+  day: string;
+  network: string;
+  image: string;
 private fakeTv: IMoviesService = {
   Genre: 'Drama',
   name: 'Girls',
